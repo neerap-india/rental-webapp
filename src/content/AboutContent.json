@@ -1,0 +1,16 @@
+{
+  "title": "Wide Range of Bikes & Cars",
+  "text": "We have all top model bikes, scooter and cars available, check out our shop and pick the one which you love to ride on.",
+  "section": [
+    {
+      "title": "Documents Required",
+      "content": "Any govt ID proof or passport xerox need to submited while picking up the ride",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Terms & Conditions",
+      "content": "Must follow the indian traffic rules and regulations.",
+      "icon": "notes.svg"
+    }
+  ]
+}

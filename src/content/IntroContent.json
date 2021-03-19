@@ -1,0 +1,13 @@
+{
+  "title": "Hey! Travler, bienvenue à pondichéry",
+  "text": "Cant wait to see you around to enjoy your travel plan, we are exited to support on your voyage ",
+  "button": [
+    {
+      "title": "Services"
+    },
+    {
+      "title": "Quick Booking",
+      "color": "#fff"
+    }
+  ]
+}
