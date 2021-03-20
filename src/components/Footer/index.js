@@ -42,7 +42,7 @@ const Footer = ({ t }) => {
                     `Do you have any question or issues regarding the webapp? Feel free to reach out.`
                   )}
                 </S.Para>
-                <a href="https://web.whatsapp.com/send?phone=918489386058&text=Thank%20you%20for%20contacting%20Dhanam%20rental%20!%20Please%20let%20us%20know%20how%20we%20can%20help%20you.">
+                <a href="https://wa.me/918489386058">
                   <S.Chat>{t(`Let's Chat`)}</S.Chat>
                 </a>
               </Col>
