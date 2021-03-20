@@ -6,21 +6,21 @@
     "static/js/1.ba74b7cb.chunk.js.map": "/rental-webapp/static/js/1.ba74b7cb.chunk.js.map",
     "static/js/2.060fe384.chunk.js": "/rental-webapp/static/js/2.060fe384.chunk.js",
     "static/js/2.060fe384.chunk.js.map": "/rental-webapp/static/js/2.060fe384.chunk.js.map",
-    "static/js/3.e20a63eb.chunk.js": "/rental-webapp/static/js/3.e20a63eb.chunk.js",
-    "static/js/3.e20a63eb.chunk.js.map": "/rental-webapp/static/js/3.e20a63eb.chunk.js.map",
-    "main.js": "/rental-webapp/static/js/main.867af228.chunk.js",
-    "main.js.map": "/rental-webapp/static/js/main.867af228.chunk.js.map",
-    "runtime-main.js": "/rental-webapp/static/js/runtime-main.1382f508.js",
-    "runtime-main.js.map": "/rental-webapp/static/js/runtime-main.1382f508.js.map",
+    "static/js/3.853a4dec.chunk.js": "/rental-webapp/static/js/3.853a4dec.chunk.js",
+    "static/js/3.853a4dec.chunk.js.map": "/rental-webapp/static/js/3.853a4dec.chunk.js.map",
+    "main.js": "/rental-webapp/static/js/main.f11a0424.chunk.js",
+    "main.js.map": "/rental-webapp/static/js/main.f11a0424.chunk.js.map",
+    "runtime-main.js": "/rental-webapp/static/js/runtime-main.9df22149.js",
+    "runtime-main.js.map": "/rental-webapp/static/js/runtime-main.9df22149.js.map",
     "static/css/6.98e7ac70.chunk.css": "/rental-webapp/static/css/6.98e7ac70.chunk.css",
     "static/js/6.25af3d5f.chunk.js": "/rental-webapp/static/js/6.25af3d5f.chunk.js",
     "static/js/6.25af3d5f.chunk.js.map": "/rental-webapp/static/js/6.25af3d5f.chunk.js.map",
     "static/js/7.effa711b.chunk.js": "/rental-webapp/static/js/7.effa711b.chunk.js",
     "static/js/7.effa711b.chunk.js.map": "/rental-webapp/static/js/7.effa711b.chunk.js.map",
-    "static/js/8.9708812f.chunk.js": "/rental-webapp/static/js/8.9708812f.chunk.js",
-    "static/js/8.9708812f.chunk.js.map": "/rental-webapp/static/js/8.9708812f.chunk.js.map",
-    "static/js/9.9b4ef949.chunk.js": "/rental-webapp/static/js/9.9b4ef949.chunk.js",
-    "static/js/9.9b4ef949.chunk.js.map": "/rental-webapp/static/js/9.9b4ef949.chunk.js.map",
+    "static/js/8.687a2b34.chunk.js": "/rental-webapp/static/js/8.687a2b34.chunk.js",
+    "static/js/8.687a2b34.chunk.js.map": "/rental-webapp/static/js/8.687a2b34.chunk.js.map",
+    "static/js/9.251cf058.chunk.js": "/rental-webapp/static/js/9.251cf058.chunk.js",
+    "static/js/9.251cf058.chunk.js.map": "/rental-webapp/static/js/9.251cf058.chunk.js.map",
     "static/js/10.943f913b.chunk.js": "/rental-webapp/static/js/10.943f913b.chunk.js",
     "static/js/10.943f913b.chunk.js.map": "/rental-webapp/static/js/10.943f913b.chunk.js.map",
     "static/js/11.dbc5af46.chunk.js": "/rental-webapp/static/js/11.dbc5af46.chunk.js",
@@ -38,9 +38,9 @@
     "static/js/6.25af3d5f.chunk.js.LICENSE.txt": "/rental-webapp/static/js/6.25af3d5f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1382f508.js",
+    "static/js/runtime-main.9df22149.js",
     "static/css/6.98e7ac70.chunk.css",
     "static/js/6.25af3d5f.chunk.js",
-    "static/js/main.867af228.chunk.js"
+    "static/js/main.f11a0424.chunk.js"
   ]
 }
