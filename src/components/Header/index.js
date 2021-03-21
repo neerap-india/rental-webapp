@@ -138,8 +138,11 @@ const Header = ({ t }) => {
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
           <S.LogoContainer to="/home" aria-label="homepage">
-            <SvgIcon src="logo.png" width="80px" height="80px" />
+            <SvgIcon src="logo.png" width="80px" height="80px" /> 
           </S.LogoContainer>
+          <S.SiteName>
+            Sri Dhanam Rental
+          </S.SiteName>
           <S.NotHidden>
             <MenuItem />
           </S.NotHidden>

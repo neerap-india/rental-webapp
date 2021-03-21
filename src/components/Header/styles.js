@@ -5,11 +5,22 @@ import { MenuOutlined } from '@ant-design/icons';
 export const Header = styled.header`
   padding: 1rem 0.5rem;
   background-color: #0F2453;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 `;
 
 export const LogoContainer = styled(Link)`
   display: flex;
   padding-top: 1rem;
+`;
+
+export const SiteName = styled.div`
+  display: flex;  
+  margin: auto;
+  color: #F9FAFC;
 `;
 
 export const Container = styled.div`

@@ -12,7 +12,7 @@ import GlobalStyles from "../globalStyles";
 const Router = () => {  
 useEffect(() => {
   Modal.warning({
-    title: 'Website is in development phase - V1.0',
+    title: 'Website is in development phase - v1.0',
     content: 'Bike / Car models, price tariff and online booking will be available soon',
   });
 }, []); 

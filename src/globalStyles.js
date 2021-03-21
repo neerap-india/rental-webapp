@@ -79,6 +79,9 @@ const Styles = createGlobalStyle`
     .ant-notification-notice-icon-success {
         color: rgb(255,130,92);
     }
+    .ant-btn {
+        background-color: #0F2453 !important;
+      }
 `;
 
 export default Styles;
