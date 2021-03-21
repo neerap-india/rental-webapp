@@ -1,4 +1,4 @@
-import { Row, Col } from "antd";
+import { Row, Col, Modal } from "antd";
 import { withTranslation } from "react-i18next";
 import Slide from "react-reveal/Slide";
 
@@ -8,12 +8,25 @@ import Button from "../../../common/Button";
 import * as S from "./styles";
 
 const RightBlock = ({ title, content, button, icon, t, id }) => {
+
+  function success() {
+    Modal.success({
+      content: `Please call to +91 84893 86058 for hassle free booking. Stay in touch with us, online booking is coming soon.`,
+    });
+    setTimeout(()=>{
+      if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      window.location.href  = 'tel:918489386058';
+       }
+    },5000)
+  }
+
   const scrollTo = (id) => {
     const element = document.getElementById(id);
     element.scrollIntoView({
       behavior: "smooth",
     });
   };
+ 
   return (
     <S.RightBlockContainer>
       <Row type="flex" justify="space-between" align="middle" id={id}>
@@ -31,13 +44,14 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
                         key={id}
                         color={item.color}
                         width="true"
-                        onClick={() => scrollTo("about")}
+                        onClick={() => item.title === "Services" ? scrollTo("about") : success()}
                       >
                         {t(item.title)}
                       </Button>
                     );
                   })}
               </S.ButtonWrapper>
+
             </S.ContentWrapper>
           </Slide>
         </Col>
