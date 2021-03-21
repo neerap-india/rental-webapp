@@ -9,8 +9,8 @@
     "static/js/3.330c9aa0.chunk.js": "/rental-webapp/static/js/3.330c9aa0.chunk.js",
     "static/js/3.330c9aa0.chunk.js.map": "/rental-webapp/static/js/3.330c9aa0.chunk.js.map",
     "main.css": "/rental-webapp/static/css/main.9852a08e.chunk.css",
-    "main.js": "/rental-webapp/static/js/main.8e4e0cdf.chunk.js",
-    "main.js.map": "/rental-webapp/static/js/main.8e4e0cdf.chunk.js.map",
+    "main.js": "/rental-webapp/static/js/main.bd5ac11d.chunk.js",
+    "main.js.map": "/rental-webapp/static/js/main.bd5ac11d.chunk.js.map",
     "runtime-main.js": "/rental-webapp/static/js/runtime-main.15b3d2c5.js",
     "runtime-main.js.map": "/rental-webapp/static/js/runtime-main.15b3d2c5.js.map",
     "static/css/6.98e7ac70.chunk.css": "/rental-webapp/static/css/6.98e7ac70.chunk.css",
@@ -44,6 +44,6 @@
     "static/css/6.98e7ac70.chunk.css",
     "static/js/6.22a3a93e.chunk.js",
     "static/css/main.9852a08e.chunk.css",
-    "static/js/main.8e4e0cdf.chunk.js"
+    "static/js/main.bd5ac11d.chunk.js"
   ]
 }
