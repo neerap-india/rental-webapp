@@ -11,13 +11,18 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
 
   function success() {
     Modal.success({
-      content: `Please call to +91 84893 86058 for hassle free booking. Stay in touch with us, online booking is coming soon.`,
+      content: (
+      <div>
+        <p>Make a call to +91 84893 86058 for hassle free booking. </p>
+        <p>Stay in touch with us, online booking is coming soon</p>
+      </div>),
+      onOk() {
+          if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.open('tel:918489386058','_blank');
+          }
+      },
     });
-    setTimeout(()=>{
-      if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      window.location.href  = 'tel:918489386058';
-       }
-    },5000)
+
   }
 
   const scrollTo = (id) => {

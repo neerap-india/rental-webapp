@@ -87,7 +87,7 @@ export const Large = styled(Link)`
 
 export const Chat = styled.p`
   color: rgba(2, 7, 62, 0.8);
-  max-width: 85px;
+  max-width: 200px;
   border-bottom: 1px solid rgba(2, 7, 62, 0.8);
   cursor: pointer;
   margin-top: 1rem;

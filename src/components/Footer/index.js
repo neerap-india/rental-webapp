@@ -42,8 +42,8 @@ const Footer = ({ t }) => {
                     `Do you have any question or issues regarding the webapp? Feel free to reach out.`
                   )}
                 </S.Para>
-                <a href="https://wa.me/918489386058">
-                  <S.Chat>{t(`Let's Chat`)}</S.Chat>
+                <a href="https://wa.me/918489386058" target="_blank" rel="noreferrer">
+                  <S.Chat>{t(`Let's Chat`)} on Whatsapp</S.Chat>
                 </a>
               </Col>
               <Col lg={8} md={8} sm={12} xs={24}>
@@ -67,12 +67,16 @@ const Footer = ({ t }) => {
             </Row>
             <Row type="flex" justify="space-between">
               <Col lg={10} md={10} sm={12} xs={24}>
-                <S.Empty />
-                <S.Language>{t("ADDRESS")}</S.Language>
-                <S.Para> Sri Dhanam Two Wheeler Renting</S.Para>
-                <S.Para>No 39-J, Chetty Street,</S.Para>
-                <S.Para>Pondicherry 605001</S.Para>
+                <S.Language>{t("ADDRESS")}</S.Language>                 
+                <S.Para>Sri Dhanam Rental</S.Para>
+                <S.Para>No.13, Ayyanar Koil St, behind new bus stand,</S.Para>
+                <S.Para>Iyyanar Nagar, Raja Nagar, </S.Para>
+                <S.Para>Pudupalaiyam, Puducherry, 605005</S.Para>
+                <S.Para>shridhanamrentals@gmail.com</S.Para>
                 <S.Para>+91 84893 86058</S.Para>
+                <a href="https://www.google.com/maps/place/Sri+Dhanam+Bike+Rental/@11.9341701,79.8154068,15z/data=!4m5!3m4!1s0x0:0xc7619947d75c2d29!8m2!3d11.9341701!4d79.8154068" target="_blank" rel="noreferrer">
+                <S.Chat>Find on Goole Map</S.Chat>
+                </a>                  
               </Col>
               <Col lg={8} md={8} sm={12} xs={24}>
                 <S.Title>{t("Company")}</S.Title>

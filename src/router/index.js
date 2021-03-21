@@ -1,5 +1,6 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
+import { Modal } from 'antd';
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -7,7 +8,15 @@ import Header from "../components/Header";
 import routes from "./config";
 import GlobalStyles from "../globalStyles";
 
-const Router = () => {
+
+const Router = () => {  
+useEffect(() => {
+  Modal.warning({
+    title: 'Website is in development phase - V1.0',
+    content: 'Bike / Car models, price tariff and online booking will be available soon',
+  });
+}, []); 
+
   return (
     <Suspense fallback={null}>
       <GlobalStyles />
