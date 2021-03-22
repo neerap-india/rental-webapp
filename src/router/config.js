@@ -1,6 +1,6 @@
 const routes = [
   {
-    path: [process.env.PUBLIC_URL, "/home"],
+    path: [process.env.PUBLIC_URL, "/"],
     exact: true,
     component: "Home",
   },

@@ -137,7 +137,7 @@ const Header = ({ t }) => {
     <S.Header>
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
-          <S.LogoContainer to="/home" aria-label="homepage">
+          <S.LogoContainer to="/" aria-label="homepage">
             <SvgIcon src="logo.png" width="80px" height="80px" /> 
           </S.LogoContainer>
           <S.SiteName>
