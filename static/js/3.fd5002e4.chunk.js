@@ -1,0 +1,2 @@
+(this["webpackJsonprental-webapp"]=this["webpackJsonprental-webapp"]||[]).push([[3],{146:function(t,e,a){"use strict";a.r(e);var i=a(2);e.default=function(t){var e=t.src,a=t.width,s=t.height;return Object(i.jsx)("img",{src:"."+"/img/svg/".concat(e),alt:e,with:a,height:s})}}}]);
+//# sourceMappingURL=3.fd5002e4.chunk.js.map

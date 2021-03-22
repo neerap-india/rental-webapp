@@ -1,2 +1,0 @@
-(this["webpackJsonprental-webapp"]=this["webpackJsonprental-webapp"]||[]).push([[3],{146:function(t,e,a){"use strict";a.r(e);var i=a(2);e.default=function(t){var e=t.src,a=t.width,n=t.height;return Object(i.jsx)("img",{src:"/rental-webapp"+"/img/svg/".concat(e),alt:e,with:a,height:n})}}}]);
-//# sourceMappingURL=3.330c9aa0.chunk.js.map
