@@ -1,10 +1,12 @@
-import { useState, Fragment, lazy } from "react";
+import { React, useEffect, useState, Fragment, lazy } from "react";
 import { Row, Col, Drawer, Modal  } from "antd";
 import { CSSTransition } from "react-transition-group";
 import { withTranslation } from "react-i18next";
 
 import * as S from "./styles";
 import Gallery from "../Gallery";
+import { getBikes } from '../../service/bikes';
+import Bikes from '../Bikes';
 
 const SvgIcon = lazy(() => import("../../common/SvgIcon"));
 const Button= lazy(() => import("../../common/Button"));
@@ -52,15 +54,30 @@ const data = [{
 	image: "https://instagram.fmaa11-1.fna.fbcdn.net/v/t51.2885-15/e35/100931355_283842082805339_2800864638438995911_n.jpg?tp=1&_nc_ht=instagram.fmaa11-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=HVkGzBpuJasAX_tWlKa&tn=9BzFwG0DfSAuQ-EP&ccb=7-4&oh=51dd93c2d5ad3c9bce216872ba3bbcdb&oe=60809ED8&_nc_sid=86f79a"
 }];
 
+
 const Header = ({ t }) => {
   const [isNavVisible] = useState(false);
   const [isSmallScreen] = useState(false);
   const [visible, setVisibility] = useState(false);
   const [visibleModal, setVisibleModal] = useState(false);
-  const [confirmLoading, setConfirmLoading] = useState(false);
+  const [confirmLoading, setConfirmLoading] = useState(false);  
+  const [activeModal, setActiveModal] = useState(null);
+  const [bikes, setBikes] = useState([]);
 
-  const showModal = () => {
+  useEffect(() => {
+   let mounted = true;
+   getBikes()
+     .then(items => {
+       if(mounted) {
+         setBikes(items)
+       }
+     })
+   return () => mounted = false;
+ }, [])
+
+  const showModal = (src) => {
     setVisibleModal(true);
+    setActiveModal(src)
   };
 
   const handleOk = () => {
@@ -98,37 +115,52 @@ const Header = ({ t }) => {
     };
     return (
       <Fragment>
-        <S.CustomNavLinkSmall onClick={showModal}>
+        <S.CustomNavLinkSmall onClick={(event) => showModal('insta')}>
           <S.Span>{t("Gallery")}</S.Span>
         </S.CustomNavLinkSmall>
-        <Modal
-        title="Instagram Gallery"
-        visible={visibleModal}
-        onOk={handleOk}
-        confirmLoading={confirmLoading}
-        onCancel={handleCancel}
-        width={1080}
-        footer={[
-          <Button key="submit" type="primary" onClick={redirectInsta}>
-            Follow on Instagram
-          </Button>
-        ]}
-      >
-        <p><Gallery data={data}/></p>
-      </Modal>
-        <S.CustomNavLinkSmall onClick={() => scrollTo("mission")}>
+        <S.CustomNavLinkSmall onClick={(event) => showModal('bikes')}>
           <S.Span>{t("Bikes")}</S.Span>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("product")}>
           <S.Span>{t("About Us")}</S.Span>
         </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall
-          onClick={() => scrollTo("contact")}
-        >
+        <S.CustomNavLinkSmall onClick={() => scrollTo("contact")} >
           <S.Span>
             <ButtonSecondary>{t("Contact")}</ButtonSecondary>
           </S.Span>
         </S.CustomNavLinkSmall>
+        { activeModal === "insta" &&
+          <Modal
+            title="Instagram Gallery"
+            visible={visibleModal}
+            onOk={handleOk}
+            confirmLoading={confirmLoading}
+            onCancel={handleCancel}
+            width={1080}
+            footer={[
+              <Button key="submit" type="primary" onClick={redirectInsta}>
+                Follow on Instagram
+          </Button>
+            ]}
+          >
+            <p><Gallery data={data} /></p>
+          </Modal>}
+          { activeModal === "bikes" &&
+          <Modal
+            title="Bike Collections"
+            visible={visibleModal}
+            onOk={handleOk}
+            confirmLoading={confirmLoading}
+            onCancel={handleCancel}
+            width={1080}
+            footer={[
+              <Button key="submit" type="primary" onClick={handleCancel}>
+                Back
+          </Button>
+            ]}
+          >
+            <p><Bikes data={bikes}/></p>
+          </Modal>}
       </Fragment>
     );
   };
