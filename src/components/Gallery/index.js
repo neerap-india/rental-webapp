@@ -1,4 +1,5 @@
 import React from "react";
+import SvgIcon from "../../common/SvgIcon";
 import './style.scss';
 
 class Gallery extends React.Component {
@@ -7,9 +8,14 @@ class Gallery extends React.Component {
 		// Pass data to each tile and assign a key
 		return (
 			<div className="tiles">
-				{this.props.data.map((data) => {
-					return <Tile data={data} key={data.id} />
-				})}
+				{this.props.data.length ? this.props.data.map((data) => {
+					return <Tile data={data} key={data._id} />
+				}) : <div style={{display: "contents"}}><SvgIcon
+                src= "404.svg"
+                width="50%"
+                height="50%"
+               /><p>Something went wrong. Please try after sometime, we regret the inconvience caused</p></div>
+			   }
 			</div>
 		);
 	}
@@ -31,7 +37,6 @@ class Tile extends React.Component {
 	_mouseEnter(e) {
 		e.preventDefault();
 		if (this.state.mouseOver === false) {
-			console.log(this.props.data.name);
 			this.setState({
 				mouseOver: true
 			})
