@@ -8,17 +8,25 @@ const useForm = (validate) => {
   const [shouldSubmit, setShouldSubmit] = useState(false);
 
   const openNotificationWithIcon = (type) => {
-    notification[type]({
-      message: "Success",
-      description: "Your message has been sent!",
-    });
+    if(type === 'success'){
+      notification[type]({
+        message: "Success",
+        description: "Your message has been sent !"
+      });
+    }
+    if(type === 'error'){
+      notification[type]({
+        message: "Error",
+        description: "Message not able to send, try again later"
+      });     
+    }
+
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setErrors(validate(values));
-    // Your url for API
-    const url = "";
+    const url = "https://rental-backend.herokuapp.com/mail";
     if (Object.keys(values).length === 3) {
       axios
         .post(url, {
@@ -26,15 +34,17 @@ const useForm = (validate) => {
         })
         .then(() => {
           setShouldSubmit(true);
-        });
+        })
+        .catch(() => {
+          openNotificationWithIcon("error");}
+        );
     }
   };
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && shouldSubmit) {
-      setValues("");
       openNotificationWithIcon("success");
-    }
+    } 
   }, [errors, shouldSubmit]);
 
   const handleChange = (event) => {
