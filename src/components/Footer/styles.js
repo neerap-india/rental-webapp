@@ -104,13 +104,11 @@ export const Empty = styled.div`
 `;
 
 export const FooterContainer = styled.div`
-  max-width: 510px;
   display: flex;
   justify-content: space-between;
 
   @media screen and (max-width: 414px) {
     padding: 2rem 0;
-    padding-right: 50%;
   }
 
   div {

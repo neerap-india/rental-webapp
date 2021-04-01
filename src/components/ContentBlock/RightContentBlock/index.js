@@ -10,16 +10,18 @@ import * as S from "./styles";
 const RightBlock = ({ title, content, button, icon, t, id }) => {
 
   function success() {
-    Modal.success({
+    Modal.info({
       content: (
       <div>
-        <p>Make a call to +91 84893 86058 for hassle free booking. </p>
-        <p>Stay in touch with us, online booking is coming soon</p>
+        <p>You are being redirect to our payment gateway. Upfront of INR 1000 will be collected for booking</p>
+        <p><small>NOTE : Upfront payment is a token advance for the online prebooking to avoid fake bookings. Actual rental amount will vary depending on the 
+          bike price and number of days.</small></p>
       </div>),
       onOk() {
-          if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            window.open('tel:918489386058','_blank');
-          }
+          // if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          //   window.open('tel:918489386058','_blank');
+          // }
+          window.open('https://www.payumoney.com/paybypayumoney/#/5AAAB1220B6518D5E8C00F6253B5CFEF','_blank');          
       },
     });
 

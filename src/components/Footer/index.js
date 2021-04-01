@@ -128,7 +128,7 @@ const Footer = ({ t }) => {
                 </S.LogoContainer>
               </S.NavLink>
               <S.FooterContainer>
-                <p>&#169; 2021 Dhanam Rental Ver 1.0 - Developed by <a href="http://manogajapathi.com" target="_blank" rel="noreferrer" >Manogajapathi</a></p>
+                <p>&#169; 2021 Dhanam Rental Ver 1.0 (Beta) - Developed by <a href="http://manogajapathi.com" target="_blank" rel="noreferrer" >Manogajapathi</a></p>
                 {/* <SocialLink
                   href="https://github.com/Adrinlol/create-react-app-adrinlol"
                   src="github.svg"
