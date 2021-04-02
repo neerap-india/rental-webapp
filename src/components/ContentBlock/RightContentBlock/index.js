@@ -13,15 +13,15 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
     Modal.info({
       content: (
       <div>
-        <p>You are being redirect to our payment gateway. Upfront of INR 1000 will be collected for booking</p>
-        <p><small>NOTE : Upfront payment is a token advance for the online prebooking to avoid fake bookings. Actual rental amount will vary depending on the 
+        <p>You are being redirect to our payment gateway. Upfront payment of INR 100 will be collected for booking.</p>
+        <p><small>NOTE : This payment is a token advance for the online prebooking to avoid fake reservation. Actual amount will vary depending on the 
           bike price and number of days.</small></p>
       </div>),
       onOk() {
           // if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
           //   window.open('tel:918489386058','_blank');
           // }
-          window.open('https://www.payumoney.com/paybypayumoney/#/5AAAB1220B6518D5E8C00F6253B5CFEF','_blank');          
+          window.open('https://www.payumoney.com/paybypayumoney/#/9ACE5C5AAFCE262AABD5378AE0F8EFDF','_blank');          
       },
     });
 
