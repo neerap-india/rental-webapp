@@ -7,6 +7,7 @@ import * as S from "./styles";
 import Gallery from "../Gallery";
 import Bikes from '../Bikes';
 import { getBikes } from '../../service/bikes';
+import { getCars } from '../../service/cars';
 import { getGallery } from '../../service/gallery';
 
 const SvgIcon = lazy(() => import("../../common/SvgIcon"));
@@ -21,6 +22,7 @@ const Header = ({ t }) => {
   const [confirmLoading, setConfirmLoading] = useState(false);  
   const [activeModal, setActiveModal] = useState(null);
   const [bikes, setBikes] = useState([]);
+  const [cars, setCars] = useState([]);
   const [gallery, setGallery] = useState([]);
 
   useEffect(() => {
@@ -33,6 +35,17 @@ const Header = ({ t }) => {
      })
    return () => mounted = false;
  }, [])
+
+ useEffect(() => {
+  let mounted = true;
+  getCars()
+    .then(items => {
+      if(mounted) {
+        setCars(items)
+      }
+    })
+  return () => mounted = false;
+}, [])
 
  useEffect(() => {
   let mounted = true;
@@ -91,6 +104,9 @@ const Header = ({ t }) => {
         <S.CustomNavLinkSmall onClick={(event) => showModal('bikes')}>
           <S.Span>{t("Bikes")}</S.Span>
         </S.CustomNavLinkSmall>
+        <S.CustomNavLinkSmall onClick={(event) => showModal('cars')}>
+          <S.Span>{t("Cars")}</S.Span>
+        </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("product")}>
           <S.Span>{t("About Us")}</S.Span>
         </S.CustomNavLinkSmall>
@@ -130,6 +146,22 @@ const Header = ({ t }) => {
             ]}
           >
             <Bikes data={bikes}/>
+          </Modal>}
+          { activeModal === "cars" &&
+          <Modal
+            title="Cars Collections"
+            visible={visibleModal}
+            onOk={handleOk}
+            confirmLoading={confirmLoading}
+            onCancel={handleCancel}
+            width={1080}
+            footer={[
+              <Button key="submit" type="primary" onClick={handleCancel}>
+                Back
+          </Button>
+            ]}
+          >
+            <Bikes data={cars}/>
           </Modal>}
       </Fragment>
     );
