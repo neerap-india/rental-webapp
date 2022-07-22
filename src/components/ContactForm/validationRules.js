@@ -8,11 +8,11 @@ export default function validate(values) {
   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
     errors.email = "Email address is invalid";
   }
+  if (!values.phone) {
+    errors.phone = "Phone number is required";
+  }
   if (!values.message) {
     errors.message = "Message is required";
-  }
-  if (!values.phone) {
-    errors.message = "Phone number is required";
   }
   return errors;
 }

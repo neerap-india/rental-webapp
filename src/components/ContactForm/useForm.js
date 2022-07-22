@@ -27,7 +27,7 @@ const useForm = (validate) => {
     event.preventDefault();
     setErrors(validate(values));
     const url = "https://rental-backend.herokuapp.com/mail";
-    if (Object.keys(values).length === 3) {
+    if (Object.keys(values).length === 4) {
       axios
         .post(url, {
           ...values,
