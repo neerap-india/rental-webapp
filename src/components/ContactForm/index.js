@@ -59,8 +59,19 @@ const Contact = ({ title, content, id, t }) => {
                 <ValidationType type="email" />
               </Col>
               <Col span={24}>
+                <Input
+                  type="text"
+                  name="phone"
+                  id="Phone"
+                  placeholder="Your Phone Number"
+                  value={values.phone || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="phone" />
+              </Col>
+              <Col span={24}>
                 <TextArea
-                  placeholder="Your Message with phone number"
+                  placeholder="Your Message"
                   value={values.message || ""}
                   name="message"
                   id="Message"

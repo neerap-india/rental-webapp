@@ -11,5 +11,8 @@ export default function validate(values) {
   if (!values.message) {
     errors.message = "Message is required";
   }
+  if (!values.phone) {
+    errors.message = "Phone number is required";
+  }
   return errors;
 }
